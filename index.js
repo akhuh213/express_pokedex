@@ -26,10 +26,6 @@ app.get('/', function(req, res) {
 app.get('/pokemon/:name', function(req, res) {
   
   let params = req.params.name
-  // let qs = {
-  //   params
-  // }
- 
   
   axios.get(`http://pokeapi.co/api/v2/pokemon/${params}`).then(response => {
     

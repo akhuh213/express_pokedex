@@ -1,0 +1,26 @@
+body{
+    background-repeat:repeat;
+    background-size: 1550px 700px;
+    text-align: center;
+    background-color: yellow; 
+    
+}
+img{
+    padding-top: 0;
+    width: 350px;
+    length: 280px;
+}
+.well {
+    margin: 40px 40px;
+    
+}
+
+#favorite{
+    background-color: yellowgreen;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: fantasy;
+    margin-top: 100px;
+   
+    
+}

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../models');
+const axios = require('axios'); 
 const pokemon = require('../models/pokemon');
 
 // GET /pokemon - return a page with favorited Pokemon
@@ -29,5 +30,19 @@ router.post('/', function(req, res) {
   res.redirect('/pokemon')
   })
 
+
+  router.get('/:id', function(req, res) {
+        
+    let params = req.params.id;
+    db.pokemon.findOne({
+      where: {name: params}
+    })    
+    axios.get(`http://pokeapi.co/api/v2/pokemon/${params}`).then(response => {     
+      let pokemon = response.data
+      console.log(pokemon)
+      res.render('show', {pokemon});
+  })
+  })
+  
 
 module.exports = router;

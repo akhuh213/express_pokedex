@@ -23,17 +23,6 @@ app.get('/', function(req, res) {
   });
 });
 
-app.get('/pokemon/:name', function(req, res) {
-  
-  let params = req.params.name
-  
-  axios.get(`http://pokeapi.co/api/v2/pokemon/${params}`).then(response => {
-    
-    let pokemon = response.data
-    console.log(pokemon)
-    res.render('show', {pokemon});
-})
-})
 
 // Imports all routes from the pokemon routes file
 app.use('/pokemon', require('./routes/pokemon'));

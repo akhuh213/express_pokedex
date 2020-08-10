@@ -3,6 +3,7 @@ body{
     background-size: 1550px 700px;
     text-align: center;
     background-color: yellow; 
+    font-family: monospace;
     
 }
 img{
@@ -11,7 +12,12 @@ img{
     length: 280px;
 }
 .well {
-    margin: 40px 40px;
+    margin: 40px 100px;
+    color: rgb(2, 2, 33);
+    font-weight: bolder;
+    background: rgb(189, 84, 84);
+    
+
     
 }
 

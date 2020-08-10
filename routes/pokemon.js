@@ -34,9 +34,7 @@ router.post('/', function(req, res) {
   router.get('/:id', function(req, res) {
         
     let params = req.params.id;
-    db.pokemon.findOne({
-      where: {name: params}
-    })    
+   
     axios.get(`http://pokeapi.co/api/v2/pokemon/${params}`).then(response => {     
       let pokemon = response.data
       console.log(pokemon)
